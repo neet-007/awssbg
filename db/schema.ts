@@ -1,4 +1,4 @@
-import { sqliteTable, text, integer } from "drizzle-orm/sqlite-core";
+import { sqliteTable, text, integer, index } from "drizzle-orm/sqlite-core";
 import { sql } from "drizzle-orm";
 
 export const admins = sqliteTable("admins", {
@@ -31,7 +31,9 @@ export const events = sqliteTable("events", {
     coverImageUrl: text("cover_image_url"),
     coverImageName: text("cover_image_name"),
     coverImageMimeType: text("cover_image_mime_type"),
-});
+}, (table) => [
+    index("event_date_index").on(table.eventDate),
+]);
 
 export const members = sqliteTable("members", {
     id: integer("id").primaryKey({ autoIncrement: true }),
@@ -44,4 +46,6 @@ export const members = sqliteTable("members", {
     coverImageName: text("cover_image_name"),
     imageMimeType: text("image_mime_type"),
     createdAt: text("created_at").default(sql`CURRENT_TIMESTAMP`),
-});
+}, (table) => [
+    index("is_current_index").on(table.isCurrent),
+]);

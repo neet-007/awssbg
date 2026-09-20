@@ -62,9 +62,44 @@ async function main() {
             ...memberImageData,
         },
         {
+            name: "Diana Prince",
+            title: "Backend Engineer",
+            shortSummary: "Specializing in distributed systems, PostgreSQL, and low-latency APIs.",
+            isCurrent: true,
+            ...memberImageData,
+        },
+        {
+            name: "Edward Elric",
+            title: "Embedded Systems Engineer",
+            shortSummary: "Working on low-level firmware, microcontrollers, and hardware drivers.",
+            isCurrent: true,
+            ...memberImageData,
+        },
+        {
+            name: "Fiona Gallagher",
+            title: "DevOps Specialist",
+            shortSummary: "Managing Cloudflare infrastructure, CI/CD pipelines, and containerization.",
+            isCurrent: true,
+            ...memberImageData,
+        },
+        {
             name: "Charlie Brown",
             title: "Former Event Coordinator",
             shortSummary: "Organized developer meetups and community workshops in 2024.",
+            isCurrent: false,
+            ...memberImageData,
+        },
+        {
+            name: "George Clark",
+            title: "Former President (2023-2025)",
+            shortSummary: "Led community growth and established core partnership initiatives.",
+            isCurrent: false,
+            ...memberImageData,
+        },
+        {
+            name: "Hannah Abbott",
+            title: "Alumni / Advisory Board",
+            shortSummary: "Providing strategic mentorship to incoming tech leads.",
             isCurrent: false,
             ...memberImageData,
         },
@@ -74,6 +109,7 @@ async function main() {
     console.log(`Inserted ${mockMembers.length} members with pre-uploaded R2 images.`);
 
     const mockEvents = [
+        // Upcoming Events
         {
             name: "Annual Tech Symposium 2026",
             eventDate: "2026-11-15T10:00:00Z",
@@ -89,6 +125,31 @@ async function main() {
             shortSummary: "A hands-on workshop building modern Next.js and SQLite apps.",
             details: "Prerequisites include basic JavaScript knowledge and Node.js installed.",
             link: "https://example.com/events/web-dev-workshop",
+        },
+        {
+            name: "Global Hackathon 2027",
+            eventDate: "2027-02-20T09:00:00Z",
+            location: "Tech Innovation Hub",
+            shortSummary: "48 hours of collaborative coding, mentoring, and prizes.",
+            details: "Teams up to 4 members. Tracks include AI, Web3, and Open Source Software.",
+            link: "https://example.com/events/global-hackathon-2027",
+        },
+        // Past Events
+        {
+            name: "Intro to System Architecture & Databases",
+            eventDate: "2026-05-10T11:00:00Z",
+            location: "Auditorium B",
+            shortSummary: "A deep dive into indexing, query optimization, and relational schema design.",
+            details: "Covered index structures, JOIN optimizations, and ORM usage in modern web stacks.",
+            link: "https://example.com/events/system-arch-2026",
+        },
+        {
+            name: "Open Source Contribution Day",
+            eventDate: "2025-10-18T13:00:00Z",
+            location: "Community Center - Room 101",
+            shortSummary: "Guiding developers through their first pull requests to popular repositories.",
+            details: "Over 50 PRs merged across various open-source projects during the session.",
+            link: "https://example.com/events/open-source-day",
         },
     ];
 
