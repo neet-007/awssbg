@@ -48,3 +48,6 @@ next-env.d.ts
 
 # Local environment variables
 .env*.local
+
+# some scripts that i use
+*.sh
