@@ -438,3 +438,120 @@ h4 {
   color: var(--color-brand-navy);
 }
 
+/* footer */
+.site-footer {
+  background: var(--color-brand-navy);
+  color: rgba(255, 255, 255, .68);
+  font-size: 15px;
+  border-block-start: 1px solid rgba(255, 255, 255, .07);
+}
+
+.site-footer__main {
+  padding-block: clamp(48px, 5vw, 72px) clamp(32px, 4vw, 48px);
+  display: grid;
+  gap: clamp(32px, 4vw, 56px);
+}
+
+@media (min-width: 768px) {
+  .site-footer__main {
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer__main {
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  }
+}
+
+.footer-brand .logo__name {
+  color: #fff;
+}
+
+.footer-brand .logo__mark {
+  background: rgba(255, 255, 255, .08);
+}
+
+.footer-brand .logo__sub {
+  color: rgba(255, 255, 255, .45);
+}
+
+.footer-brand p {
+  margin-block-start: var(--space-4);
+  max-width: 34ch;
+  color: rgba(255, 255, 255, .58);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+.footer-col h3 {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-block-end: var(--space-4);
+}
+
+.footer-col ul {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.footer-col a {
+  display: inline-block;
+  padding-block: 5px;
+  color: rgba(255, 255, 255, .66);
+  font-size: 14.5px;
+  transition: color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.footer-col a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-block-start: var(--space-6);
+}
+
+.socials a {
+  inline-size: 42px;
+  block-size: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, .72);
+  transition: border-color var(--dur) var(--ease),
+    color var(--dur) var(--ease),
+    background-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease);
+}
+
+.socials a:hover {
+  border-color: var(--color-brand-purple);
+  color: #fff;
+  background: rgba(173, 92, 255, .12);
+  transform: translateY(-2px);
+}
+
+.socials svg {
+  inline-size: 19px;
+  block-size: 19px;
+}
+
+.footer-bottom {
+  border-block-start: 1px solid rgba(255, 255, 255, .09);
+  padding-block: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, .5);
+}

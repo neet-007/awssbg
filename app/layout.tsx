@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const amazonEmber = localFont({
   src: [
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <a className="skip-link" href="#main">Skip to content</a>
         <Header />
         <main id="main" className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );
